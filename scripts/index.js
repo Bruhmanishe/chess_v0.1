@@ -1,10 +1,13 @@
 let game = new Game();
 
 window.onload = () => {
-  game.gameScreen.width = window.innerWidth * 0.95;
-  game.gameScreen.height = window.innerWidth * 0.95;
+  game.gameScreen.width =
+    (window.innerWidth > window.innerHeight
+      ? window.innerHeight
+      : window.innerWidth) * 0.95;
+  game.gameScreen.height = game.gameScreen.width;
   game.gameScreen.canvas.width = game.gameScreen.width;
-  game.gameScreen.canvas.height = game.gameScreen.height;
+  game.gameScreen.canvas.height = game.gameScreen.width;
 
   game.init();
   function animation() {
