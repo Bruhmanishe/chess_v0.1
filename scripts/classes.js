@@ -731,7 +731,7 @@ class Game {
     ctx.globalAlpha = 1;
     this.winner === "white" ? ctx.rotate(Math.PI) : null;
     ctx.textAlign = "center";
-    ctx.font = "bold 50px verdana, sans-serif";
+    ctx.font = `bold ${this.gameScreen.width / 20}px verdana, sans-serif`;
     ctx.fillText(
       "Player of " + this.winner + " has won!",
       this.winner === "white"
